@@ -91,8 +91,7 @@ const saveResult = (result, id) => {
     localStorage.setItem(id, result);
 };
 
- 
- const loadResult = id => localStorage.getItem(id);
+const loadResult = id => localStorage.getItem(id);
 
 const createKeyAnswers = data => {
     const keys = [];
@@ -171,8 +170,7 @@ return {
     button.addEventListener('click', () => {
         hideElem(block, initQuiz);
         })
-    })
-   };
+    };
 
    
 
