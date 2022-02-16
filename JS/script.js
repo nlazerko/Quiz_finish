@@ -20,7 +20,7 @@ const showElem = elem => {
     };
 
     requestAnimationFrame(animation);
-}
+};
 
 const hideElem = (elem, cb) => {
 let opacity = getComputedStyle(elem).getPropertyValue('opacity');
@@ -38,7 +38,6 @@ const animation = () => {
 };
 
 requestAnimationFrame(animation);
-
 };
 
 const renderTheme = themes => {
@@ -101,7 +100,7 @@ const createKeyAnswers = data => {
             keys.push([data.answers[i], !i]);
         } else {
             keys.push([data.answers[i], i < data.correct]) 
-          }
+        }
     }
 
     return shuffle(keys);
@@ -140,14 +139,13 @@ return {
     block.className = 'main__box main__box_result result';
     
     const percent = result / quiz.list.length * 100;
-   
-   let ratio = 0;
-   
+    
+    let ratio = 0;
+    
     for(let i = 0; i < quiz.result.length; i++) {
-      if(percent >= quiz.result[i][0]) {
-          ratio = i;
-   
-      }
+        if(percent >= quiz.result[i][0]) {
+            ratio = i;
+        }
     }
    
     block.innerHTML = `<h2 class="main__subtitle main__subtitle_result">Ваш результат</h2>
